@@ -1,12 +1,12 @@
 <!-- ---
-!-- Timestamp: 2025-11-18 19:25:00
+!-- Timestamp: 2025-11-18 19:32:04
 !-- Author: ywatanabe
 !-- File: /home/ywatanabe/proj/examples/scitex_template_research/README.md
 !-- --- -->
 
-# SciTeX Template Research
+# SciTeX Template for Research Project
 
-A comprehensive research project template built on [SciTeX](https://github.com/ywatanabe1989/scitex), demonstrating standardized workflows for scientific research including data analysis, visualization, and manuscript writing.
+A research project template designed for [SciTeX](https://scitex.ai), demonstrating standardized workflows for scientific research including data analysis, visualization, and manuscript writing.
 
 ## Overview
 
@@ -399,13 +399,7 @@ If you use this template in your research, please cite:
 
 ## Contact
 
-Yusuke Watanabe
-- Email: ywatanabe@alumni.u-tokyo.ac.jp
-- GitHub: [@ywatanabe1989](https://github.com/ywatanabe1989)
-
-## Acknowledgments
-
-Built with the SciTeX framework for standardized scientific research workflows.
+ywatanabe@scitex.ai
 
 ---
 
