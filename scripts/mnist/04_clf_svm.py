@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Timestamp: "2025-11-18 10:47:54 (ywatanabe)"
-# File: /home/ywatanabe/proj/examples/scitex_template_research/scripts/mnist/04_clf_svm.py
+# File: /home/ywatanabe/proj/examples/scitex-research-template/scripts/mnist/04_clf_svm.py
 
 
 """Trains and evaluates SVM classifier on MNIST dataset"""

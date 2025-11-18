@@ -1,7 +1,7 @@
 <!-- ---
-!-- Timestamp: 2025-11-18 19:32:04
+!-- Timestamp: 2025-11-18 20:00:32
 !-- Author: ywatanabe
-!-- File: /home/ywatanabe/proj/examples/scitex_template_research/README.md
+!-- File: /home/ywatanabe/proj/examples/scitex-research-template/README.md
 !-- --- -->
 
 # SciTeX Template for Research Project
@@ -21,8 +21,8 @@ This template showcases the SciTeX framework's capabilities:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ywatanabe1989/scitex_template_research.git
-cd scitex_template_research
+git clone https://github.com/ywatanabe1989/scitex-research-template.git
+cd scitex-research-template
 
 # Install dependencies
 make install
@@ -40,7 +40,7 @@ make setup-writer
 ## Project Structure
 
 ```
-scitex_template_research/
+scitex-research-template/
 ├── config/              # Configuration files
 │   ├── MNIST.yaml      # MNIST-specific settings
 │   └── PATH.yaml       # Path configurations
@@ -261,7 +261,7 @@ The included MNIST example demonstrates best practices:
 
 Defines project-wide paths:
 ```yaml
-BASE_DIR: /home/user/proj/scitex_template_research
+BASE_DIR: /home/user/proj/scitex-research-template
 DATA_DIR: ${BASE_DIR}/data
 CONFIG_DIR: ${BASE_DIR}/config
 SCRIPTS_DIR: ${BASE_DIR}/scripts
@@ -384,11 +384,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 If you use this template in your research, please cite:
 
 ```bibtex
-@software{scitex_template_research,
+@software{scitex-research-template,
   author = {Watanabe, Yusuke},
   title = {SciTeX Template Research},
   year = {2025},
-  url = {https://github.com/ywatanabe1989/scitex_template_research}
+  url = {https://github.com/ywatanabe1989/scitex-research-template}
 }
 ```
 
@@ -397,14 +397,12 @@ If you use this template in your research, please cite:
 - [SciTeX](https://github.com/ywatanabe1989/scitex) - Main framework
 - [SciTeX Writer](https://github.com/ywatanabe1989/scitex-writer) - Manuscript template
 
-## Contact
+## 📄 License
 
-ywatanabe@scitex.ai
+This project is licensed under the MIT License.
 
----
+## 📧 Contact
 
-**Version**: 2.0.0
-**Last Updated**: 2025-11-18
-**SciTeX Version**: >= 0.1.0
+Yusuke Watanabe (ywatanabe@scitex.ai)
 
 <!-- EOF -->

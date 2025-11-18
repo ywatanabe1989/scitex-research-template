@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Timestamp: "2025-11-18 10:47:57 (ywatanabe)"
-# File: /home/ywatanabe/proj/examples/scitex_template_research/scripts/mnist/01_download.py
+# File: /home/ywatanabe/proj/examples/scitex-research-template/scripts/mnist/01_download.py
 
 
 """Downloads MNIST dataset and saves preprocessed versions"""
