@@ -24,6 +24,7 @@
 	install \
 	install-dev \
 	setup \
+	setup-writer \
 	run-mnist \
 	run-mnist-download \
 	run-mnist-plot-digits \
@@ -37,6 +38,7 @@
 	clean-logs \
 	clean-all \
 	clean-python \
+	clean-writer \
 	test \
 	test-verbose \
 	test-sync \
@@ -63,6 +65,8 @@ MNIST_DIR := $(SCRIPTS_DIR)/mnist
 CONFIG_DIR := config
 DATA_DIR := data
 TESTS_DIR := tests
+SCITEX_DIR := scitex
+WRITER_DIR := $(SCITEX_DIR)/writer
 
 # Colors
 GREEN := \033[0;32m
@@ -85,6 +89,7 @@ help:
 	@echo "  make install                       # Install Python dependencies"
 	@echo "  make install-dev                   # Install dev dependencies (testing, linting)"
 	@echo "  make setup                         # Complete setup (install + verify)"
+	@echo "  make setup-writer                  # Clone writer template project (example_paper)"
 	@echo ""
 	@echo "$(CYAN)Running Scripts:$(NC)"
 	@echo "  make run-mnist                     # Run complete MNIST pipeline"
@@ -100,6 +105,7 @@ help:
 	@echo "  make clean-outputs                 # Clean all *_out directories"
 	@echo "  make clean-data                    # Clean generated data files"
 	@echo "  make clean-logs                    # Clean log files"
+	@echo "  make clean-writer                  # Remove writer projects (use with caution!)"
 	@echo "  make clean-all                     # Clean everything (outputs + data + cache)"
 	@echo "  make clean-python                  # Clean Python cache files"
 	@echo ""
@@ -148,6 +154,28 @@ setup: install
 	@mkdir -p $(DATA_DIR)/mnist/raw
 	@echo "$(GREEN)Project setup complete$(NC)"
 	@$(MAKE) verify
+	@echo ""
+	@echo "$(YELLOW)To create a writer project, run:$(NC)"
+	@echo "  make setup-writer"
+	@echo "  $(YELLOW)or manually:$(NC) scitex writer clone $(WRITER_DIR)/your_paper_name"
+	@echo ""
+
+setup-writer:
+	@echo "$(CYAN)Setting up writer project...$(NC)"
+	@if [ -d "$(WRITER_DIR)/example_paper" ]; then \
+		echo "$(YELLOW)Writer project already exists at $(WRITER_DIR)/example_paper$(NC)"; \
+		echo "$(YELLOW)To create a new project, use:$(NC)"; \
+		echo "  scitex writer clone $(WRITER_DIR)/your_paper_name"; \
+	else \
+		echo "$(CYAN)Cloning writer template to $(WRITER_DIR)/example_paper...$(NC)"; \
+		scitex writer clone $(WRITER_DIR)/example_paper; \
+		echo "$(GREEN)Writer project created successfully!$(NC)"; \
+		echo ""; \
+		echo "$(CYAN)To compile the manuscript:$(NC)"; \
+		echo "  cd $(WRITER_DIR)/example_paper"; \
+		echo "  scitex writer compile manuscript"; \
+		echo ""; \
+	fi
 
 verify:
 	@echo "$(CYAN)Verifying installation...$(NC)"
@@ -272,6 +300,24 @@ clean-python:
 	@find . -type d -name ".ruff_cache" -exec rm -rf {} + 2>/dev/null || true
 	@find . -type d -name ".mypy_cache" -exec rm -rf {} + 2>/dev/null || true
 	@echo "$(GREEN)Python cache cleaned$(NC)"
+
+clean-writer:
+	@echo "$(RED)WARNING: This will DELETE all writer projects!$(NC)"
+	@echo "$(RED)Each writer project is an independent git repository.$(NC)"
+	@echo "$(RED)Make sure you have pushed any uncommitted changes!$(NC)"
+	@printf "Type 'DELETE WRITER PROJECTS' to confirm: "; \
+	read confirm; \
+	if [ "$$confirm" = "DELETE WRITER PROJECTS" ]; then \
+		echo "$(YELLOW)Removing all writer projects...$(NC)"; \
+		if [ -d "$(WRITER_DIR)" ]; then \
+			rm -rf $(WRITER_DIR)/*/; \
+			echo "$(GREEN)Writer projects removed$(NC)"; \
+		else \
+			echo "$(YELLOW)No writer directory found$(NC)"; \
+		fi; \
+	else \
+		echo "$(YELLOW)Cancelled$(NC)"; \
+	fi
 
 # ============================================
 # Testing
