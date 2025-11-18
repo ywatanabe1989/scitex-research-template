@@ -166,6 +166,12 @@ setup-writer:
 		echo "$(YELLOW)Writer project already exists at $(WRITER_DIR)/example_paper$(NC)"; \
 		echo "$(YELLOW)To create a new project, use:$(NC)"; \
 		echo "  scitex writer clone $(WRITER_DIR)/your_paper_name"; \
+		echo ""; \
+		echo "$(YELLOW)Git strategies available:$(NC)"; \
+		echo "  --git-strategy child   (default: independent git repo)"; \
+		echo "  --git-strategy parent  (track in main repo)"; \
+		echo "  --git-strategy origin  (preserve template history)"; \
+		echo "  --git-strategy none    (no git initialization)"; \
 	else \
 		echo "$(CYAN)Cloning writer template to $(WRITER_DIR)/example_paper...$(NC)"; \
 		scitex writer clone $(WRITER_DIR)/example_paper; \
@@ -174,6 +180,10 @@ setup-writer:
 		echo "$(CYAN)To compile the manuscript:$(NC)"; \
 		echo "  cd $(WRITER_DIR)/example_paper"; \
 		echo "  scitex writer compile manuscript"; \
+		echo ""; \
+		echo "$(YELLOW)Note: Uses 'child' git strategy (independent repository)$(NC)"; \
+		echo "$(YELLOW)To use parent repo instead:$(NC)"; \
+		echo "  scitex writer clone $(WRITER_DIR)/your_paper --git-strategy parent"; \
 		echo ""; \
 	fi
 
