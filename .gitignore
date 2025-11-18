@@ -636,3 +636,24 @@ mgmt
 !**/.gitkeep
 ./docs/to_claude
 .claude
+
+### SciTeX-specific patterns (v0.1.0-alpha) ###
+# SciTeX cache files (all regenerable)
+scitex/cache/
+
+# Recent symlinks (regenerable)
+scitex/recent/
+
+# Mount points (external resources)
+scitex/mnt/
+scitex/opt/
+
+# Optional: ignore uploads inbox (uncomment to gitignore before organizing)
+# scitex/uploads/
+
+# Optional: ignore conversations (uncomment for privacy)
+# scitex/ai/conversations/
+
+# Optional: commit metadata.db for team collaboration (already gitignored by **/*.db above)
+# To track metadata.db, add explicit exception:
+# !scitex/metadata.db
