@@ -217,4 +217,4 @@ After running all scripts, you should see:
 
 ## License
 
-Part of the scitex_template_research project.
+Part of the scitex-research-template project.

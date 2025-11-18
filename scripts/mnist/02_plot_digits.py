@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Timestamp: "2025-11-18 11:38:35 (ywatanabe)"
-# File: /home/ywatanabe/proj/examples/scitex_template_research/scripts/mnist/02_plot_digits.py
+# File: /home/ywatanabe/proj/examples/scitex-research-template/scripts/mnist/02_plot_digits.py
 
 
 """Visualizes MNIST dataset samples"""

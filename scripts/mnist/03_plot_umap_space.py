@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Timestamp: "2025-11-18 11:43:04 (ywatanabe)"
-# File: /home/ywatanabe/proj/examples/scitex_template_research/scripts/mnist/03_plot_umap_space.py
+# File: /home/ywatanabe/proj/examples/scitex-research-template/scripts/mnist/03_plot_umap_space.py
 
 
 """Creates UMAP visualization of MNIST dataset"""

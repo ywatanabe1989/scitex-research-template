@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Timestamp: "2025-11-18 10:47:55 (ywatanabe)"
-# File: /home/ywatanabe/proj/examples/scitex_template_research/scripts/mnist/05_plot_conf_mat.py
+# File: /home/ywatanabe/proj/examples/scitex-research-template/scripts/mnist/05_plot_conf_mat.py
 
 
 """Plots confusion matrix from saved predictions and labels"""
