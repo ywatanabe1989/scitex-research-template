@@ -638,6 +638,10 @@ mgmt
 .claude
 
 ### SciTeX-specific patterns (v0.1.0-alpha) ###
+# Writer projects (cloned on-demand via: make setup-writer)
+scitex/writer/*
+!scitex/writer/.gitkeep
+
 # SciTeX cache files (all regenerable)
 scitex/cache/
 
